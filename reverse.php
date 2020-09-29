@@ -16,14 +16,14 @@
 				$parse = parse_url($http);
 				$domain = preg_replace('/^www\./', '', $parse['host']);
 				$www = "www.".$domain;
-      			$host = gethostbynamel($www);
-      			foreach($host as $key){
-      				for($i = 0; $i < $key;$i++);
-       				echo green."[+] $key <== [Success]\n";
-         			$open = fopen("result.txt",'a+');
-        			fwrite($open,"$key\n");
-        			fclose($open);
-      			}
+      				$host = gethostbynamel($www);
+      				foreach($host as $key){
+      					for($i = 0; $i < $key;$i++);
+       					echo green."[+] $key <== [Success]\n";
+         				$open = fopen("result.txt",'a+');
+        				fwrite($open,"$key\n");
+        				fclose($open);
+      				}
 			}
 		}
 		public function headerr(){
