@@ -1,6 +1,6 @@
 # mass-reverse-domain-to-ip
 <p align="center">
-  <img src="https://github.com/dmzhari/mass-reverse-domain-to-ip/blob/master/gambar.png" />
+  <img src="https://github.com/dmzhari/mass-reverse-domain-to-ip/blob/master/gambar.png />
 </p>
 
 
