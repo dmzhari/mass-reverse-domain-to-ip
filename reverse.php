@@ -1,6 +1,8 @@
 <?php
 	error_reporting(0);
+	define('red',"\e[31m");
 	define("green","\e[32m");
+	define('yellow',"\e[33m");
 	class ReverseDomain{
 		public $list;
 		public function Domain(){
@@ -24,8 +26,19 @@
       			}
 			}
 		}
+		public function headerr(){
+			echo red."\n
+			             #################################
+			             #   Mass Reverse Domain To Ip   #
+			             #################################";
+			echo yellow."
+			             #################################
+			             #[!] Coded By ./EcchiExploit [!]#
+			             #################################\n\n";
+		}
 	}
 	$reverse = new ReverseDomain();
+	$reverse->headerr();
 	if(!isset($argv[1])){
 		echo "USE : php reverse.php list.txt";
 		exit(1);
