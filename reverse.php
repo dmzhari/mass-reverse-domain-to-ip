@@ -19,14 +19,14 @@
 				$parse = parse_url($a);
 				$domain = preg_replace('/^www\./', '', $parse['host']);
 				$www = "www.".$domain;
-      			$host = gethostbyname($www);
-      			for ($i=0; $i < $host; $i++) {
-       				echo green."[+] $host <== [Success]\n";
-         			$open = fopen("result.txt",'a+');
-        			fwrite($open,"$host\n");
-        			fclose($open);
-        			break;
-      			}
+      				$host = gethostbyname($www);
+      				for ($i=0; $i < $host; $i++) {
+      					echo green."[+] $host <== [Success]\n";
+         				$open = fopen("result.txt",'a+');
+        				fwrite($open,"$host\n");
+        				fclose($open);
+        				break;
+      				}
 			}
 		}
 		public function headerr(){
