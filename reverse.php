@@ -1,5 +1,5 @@
 <?php
-	error_reporting(0);
+	//error_reporting(0);
 	define('red',"\e[31m");
 	define("green","\e[32m");
 	define('yellow',"\e[33m");
@@ -11,19 +11,22 @@
 			$array = array_unique($exp);
 			foreach ($array as $http) {
 				if(!preg_match('#^http(s)?://#',$http)){
-					$http = "http://".$http;
+					$a = "http://".$http;
 				}
-				$parse = parse_url($http);
+				else {
+					$a = $http;
+				}
+				$parse = parse_url($a);
 				$domain = preg_replace('/^www\./', '', $parse['host']);
 				$www = "www.".$domain;
-      				$host = gethostbynamel($www);
-      				foreach($host as $key){
-      					for($i = 0; $i < $key;$i++);
-       					echo green."[+] $key <== [Success]\n";
-         				$open = fopen("result.txt",'a+');
-        				fwrite($open,"$key\n");
-        				fclose($open);
-      				}
+      			$host = gethostbyname($www);
+      			for ($i=0; $i < $host; $i++) {
+       				echo green."[+] $host <== [Success]\n";
+         			$open = fopen("result.txt",'a+');
+        			fwrite($open,"$host\n");
+        			fclose($open);
+        			break;
+      			}
 			}
 		}
 		public function headerr(){
